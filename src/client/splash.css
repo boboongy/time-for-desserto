@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+  color: #000000;
+}
+
+.app {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  gap: 20px;
+  padding-bottom: 56px;
+  overflow: hidden;
+}
+
+/* The same illustrated bakery-front art used on the in-game main menu, so
+   the splash screen doesn't read as a separate, disconnected template. */
+.backdrop {
+  position: absolute;
+  inset: 0;
+  background-image: url("/assets/menubackground.png");
+  background-size: cover;
+  background-position: center top;
+  z-index: -2;
+}
+
+/* The art is busy (shelves, chalkboard text) — a bottom-up scrim keeps the
+   title/button readable without flattening the image everywhere. */
+.backdrop::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(59, 36, 23, 0) 40%, rgba(59, 36, 23, 0.85) 100%);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.game-title {
+  font-family: "Arial Black", Arial, sans-serif;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  color: #f3e6c9;
+  text-shadow:
+    -2px -2px 0 #3b2417,
+    2px -2px 0 #3b2417,
+    -2px 2px 0 #3b2417,
+    2px 2px 0 #3b2417,
+    0 3px 6px rgba(0, 0, 0, 0.4);
+}
+
+.greeting {
+  font-size: 1em;
+  text-align: center;
+  color: #f3e6c9;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.start-button {
+  background-color: #3b2417;
+  color: #f3e6c9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  border: 3px solid #f3e6c9;
+  padding: 8px 28px;
+  height: 40px;
+  font-size: 1.15em;
+  font-weight: bold;
+  border-radius: 14px;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.35);
+  transition: background-color 0.2s ease;
+}
+
+.start-button:hover {
+  background-color: #56341f;
+}
+
+.footer {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  font-size: 0.8em;
+  color: #f3e6c9;
+  opacity: 0.75;
+}
+
+.docs-link {
+  cursor: pointer;
+}
+
+.divider {
+  color: rgba(243, 230, 201, 0.4);
+}
