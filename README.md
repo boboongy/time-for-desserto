@@ -3,6 +3,8 @@
 A cozy pixel-art time-management bakery game — bake, serve, repeat. Built as a
 [Devvit](https://developers.reddit.com/) web app that runs directly inside a Reddit post.
 
+**▶ [Play it on Reddit](https://www.reddit.com/r/time_for_desserto_dev/comments/1uwps9m/timefordesserto/)**
+
 ## Tech stack
 
 | Layer | Tech |
